@@ -19,7 +19,8 @@ $total_layak = mysqli_fetch_row(mysqli_query($koneksi, "SELECT COUNT(*) FROM has
     <nav>
         <a href="index.php" class="active">Dashboard</a>
         <a href="siswa.php">Data Siswa</a>
-        <a href="hitung.php">Hitung SPK</a>
+        <a href="ahp.php">Hitung AHP</a>
+        <a href="hitung.php">Hitung SAW &amp; TOPSIS</a>
         <a href="hasil.php">Hasil & Peringkat</a>
     </nav>
 </div>

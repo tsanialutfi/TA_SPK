@@ -54,7 +54,8 @@ $total = mysqli_num_rows($siswa_list);
     <nav>
         <a href="index.php">Dashboard</a>
         <a href="siswa.php" class="active">Data Siswa</a>
-        <a href="hitung.php">Hitung SPK</a>
+        <a href="ahp.php">Hitung AHP</a>
+        <a href="hitung.php">Hitung SAW &amp; TOPSIS</a>
         <a href="hasil.php">Hasil & Peringkat</a>
     </nav>
 </div>

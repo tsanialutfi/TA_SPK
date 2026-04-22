@@ -1,12 +1,12 @@
-# 🏆 SPK Seleksi Siswa Masuk Kelas Olimpiade SMAN 3 Malang
+# 🏆 SPK Seleksi Calon Peserta Olimpiade SMAN 3 Malang
 
-Sistem Pendukung Keputusan (SPK) untuk menyeleksi siswa yang layak masuk ke **Kelas Olimpiade** menggunakan metode **SAW (Simple Additive Weighting)** dan **TOPSIS (Technique for Order Preference by Similarity to Ideal Solution)**.
+Sistem Pendukung Keputusan (SPK) untuk menyeleksi calon peserta olimpiade menggunakan metode **SAW (Simple Additive Weighting)** dan **TOPSIS (Technique for Order Preference by Similarity to Ideal Solution)**.
 
 ---
 
 ## 📌 Deskripsi Proyek
 
-Sistem ini dibuat sebagai implementasi tugas praktikum mata kuliah **Sistem Pendukung Keputusan** di Universitas Brawijaya. Sistem membantu Waka Kurikulum SMAN 3 Malang dalam menentukan siswa yang paling layak ditempatkan di kelas olimpiade secara **objektif** dan **berbasis data multi-kriteria**.
+Sistem ini dibuat sebagai implementasi tugas praktikum mata kuliah **Sistem Pendukung Keputusan** di Universitas Brawijaya. Sistem membantu Waka Kurikulum SMAN 3 Malang dalam menentukan siswa yang paling layak mewakili sekolah dalam kompetisi olimpiade secara **objektif** dan **berbasis data**.
 
 ---
 
@@ -25,7 +25,7 @@ Sistem ini dibuat sebagai implementasi tugas praktikum mata kuliah **Sistem Pend
 
 ## ✨ Fitur Sistem
 
-- ➕ **Input data siswa** — tambah dan hapus data calon siswa kelas olimpiade
+- ➕ **Input data siswa** — tambah dan hapus data calon peserta olimpiade
 - 🧮 **Perhitungan SAW** — perangkingan berbasis Simple Additive Weighting
 - 📐 **Perhitungan TOPSIS** — perangkingan berbasis jarak solusi ideal
 - 📊 **Perbandingan hasil** — membandingkan peringkat SAW vs TOPSIS
@@ -64,24 +64,9 @@ Bobot kriteria diperoleh dari perhitungan **AHP (Analytic Hierarchy Process)** d
 
 ---
 
-## 📁 Struktur File
-
-```
-TA_SPK/
-├── css/
-│   └── style.css        # Styling tampilan
-├── index.php            # Dashboard utama
-├── siswa.php            # Kelola data siswa
-├── hitung.php           # Proses perhitungan SAW & TOPSIS
-├── hasil.php            # Tampilan hasil & peringkat
-├── koneksi.php          # Koneksi database
-├── .gitignore           # File git ignore
-└── README.md            # Dokumentasi proyek
-```
-
 ## 🚀 Cara Penggunaan
 
-1. **Data Siswa** → Input data siswa yang akan diseleksi masuk kelas olimpiade
+1. **Data Siswa** → Input data calon peserta olimpiade
 2. **Hitung SPK** → Klik tombol untuk menjalankan perhitungan SAW & TOPSIS
 3. **Hasil & Peringkat** → Lihat peringkat dan perbandingan kedua metode
 

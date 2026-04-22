@@ -44,7 +44,8 @@ function rankIcon($r) {
     <nav>
         <a href="index.php">Dashboard</a>
         <a href="siswa.php">Data Siswa</a>
-        <a href="hitung.php">Hitung SPK</a>
+        <a href="ahp.php">Hitung AHP</a>
+        <a href="hitung.php">Hitung SAW &amp; TOPSIS</a>
         <a href="hasil.php" class="active">Hasil & Peringkat</a>
     </nav>
 </div>

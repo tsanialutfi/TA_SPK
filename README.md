@@ -1,12 +1,12 @@
-# 🏆 SPK Seleksi Calon Peserta Olimpiade SMAN 3 Malang
+# 🏆 SPK Seleksi Siswa Masuk Kelas Olimpiade SMAN 3 Malang
 
-Sistem Pendukung Keputusan (SPK) untuk menyeleksi calon peserta olimpiade menggunakan metode **SAW (Simple Additive Weighting)** dan **TOPSIS (Technique for Order Preference by Similarity to Ideal Solution)**.
+Sistem Pendukung Keputusan (SPK) untuk menyeleksi siswa yang layak masuk ke **Kelas Olimpiade** menggunakan metode **SAW (Simple Additive Weighting)** dan **TOPSIS (Technique for Order Preference by Similarity to Ideal Solution)**.
 
 ---
 
 ## 📌 Deskripsi Proyek
 
-Sistem ini dibuat sebagai implementasi tugas praktikum mata kuliah **Sistem Pendukung Keputusan** di Universitas Brawijaya. Sistem membantu Waka Kurikulum SMAN 3 Malang dalam menentukan siswa yang paling layak mewakili sekolah dalam kompetisi olimpiade secara **objektif** dan **berbasis data**.
+Sistem ini dibuat sebagai implementasi tugas praktikum mata kuliah **Sistem Pendukung Keputusan** di Universitas Brawijaya. Sistem membantu Waka Kurikulum SMAN 3 Malang dalam menentukan siswa yang paling layak ditempatkan di kelas olimpiade secara **objektif** dan **berbasis data multi-kriteria**.
 
 ---
 
@@ -25,7 +25,7 @@ Sistem ini dibuat sebagai implementasi tugas praktikum mata kuliah **Sistem Pend
 
 ## ✨ Fitur Sistem
 
-- ➕ **Input data siswa** — tambah dan hapus data calon peserta olimpiade
+- ➕ **Input data siswa** — tambah dan hapus data calon siswa kelas olimpiade
 - 🧮 **Perhitungan SAW** — perangkingan berbasis Simple Additive Weighting
 - 📐 **Perhitungan TOPSIS** — perangkingan berbasis jarak solusi ideal
 - 📊 **Perbandingan hasil** — membandingkan peringkat SAW vs TOPSIS
@@ -79,70 +79,9 @@ TA_SPK/
 └── README.md            # Dokumentasi proyek
 ```
 
----
-
-## ⚙️ Cara Instalasi & Menjalankan
-
-### Prasyarat
-- XAMPP sudah terinstall (Apache + MySQL)
-- Browser (Chrome / Firefox)
-
-### Langkah-langkah
-
-**1. Clone repository ini:**
-```bash
-git clone https://github.com/tsanialutfi/TA_SPK.git
-```
-
-**2. Pindahkan folder ke htdocs:**
-```
-C:\xampp\htdocs\TA_SPK
-```
-
-**3. Buat database di phpMyAdmin:**
-- Buka `localhost/phpmyadmin`
-- Buat database baru bernama `ta_spk`
-- Collation: `utf8mb4_general_ci`
-
-**4. Buat tabel dengan query SQL berikut:**
-```sql
-CREATE TABLE siswa (
-  id INT AUTO_INCREMENT PRIMARY KEY,
-  nisn VARCHAR(20) NOT NULL,
-  nama VARCHAR(100) NOT NULL,
-  kelas VARCHAR(10) NOT NULL,
-  bidang_olimpiade VARCHAR(50) NOT NULL,
-  nilai_smp DOUBLE NOT NULL,
-  jumlah_sertifikat INT NOT NULL,
-  tingkat VARCHAR(20) NOT NULL,
-  nilai_mapel DOUBLE NOT NULL,
-  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-);
-
-CREATE TABLE hasil_spk (
-  id INT AUTO_INCREMENT PRIMARY KEY,
-  id_siswa INT NOT NULL,
-  metode VARCHAR(10) NOT NULL,
-  skor DOUBLE NOT NULL,
-  peringkat INT NOT NULL,
-  rekomendasi VARCHAR(50) NOT NULL,
-  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-  FOREIGN KEY (id_siswa) REFERENCES siswa(id)
-);
-```
-
-**5. Jalankan XAMPP** — Start Apache & MySQL
-
-**6. Buka browser:**
-```
-localhost/TA_SPK
-```
-
----
-
 ## 🚀 Cara Penggunaan
 
-1. **Data Siswa** → Input data calon peserta olimpiade
+1. **Data Siswa** → Input data siswa yang akan diseleksi masuk kelas olimpiade
 2. **Hitung SPK** → Klik tombol untuk menjalankan perhitungan SAW & TOPSIS
 3. **Hasil & Peringkat** → Lihat peringkat dan perbandingan kedua metode
 
